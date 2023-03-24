@@ -1,0 +1,17 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Actor</h3>
+    <form >
+        <div class="form-group">
+            <div class="mt-3">
+                <label for="">Nombre: </label>
+                <input type="text" class="form-control" id="firstName" [(ngModel)] = "actor.firstName" name="firstName">
+            </div>
+            <div class="mt-3">
+                <label for="">Apellido: </label>
+                <input type="text" class="form-control" id="lastName" [(ngModel)] = "actor.lastName" name="lastName">
+            </div>
+        </div>
+
+        <button class="btn btn-success mt-2" type="submit" (click)="addActor()">Guardar</button>
+    </form>
+</div>

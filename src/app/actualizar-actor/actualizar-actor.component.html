@@ -1,0 +1,36 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Edición de Actor</h3>
+    <form (ngSubmit)= "onSubmit()" #actorForm = "ngForm">
+      <div class="form-group mt-2">
+        <label>Nombre: </label>
+        <input type = "text"
+        class="form-control"
+        id = "firstName"
+        [(ngModel)] = "actores.firstName"
+        name = "firstName"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su nombre "
+        #nombre = "ngModel"
+        >
+      </div>
+  
+      <div class="form-group mt-2">
+        <label>Apellido: </label>
+        <input type = "text"
+        class="form-control"
+        id = "lastName"
+        [(ngModel)] = "actores.lastName"
+        name = "lastName"
+        required
+        minlength="4"
+        maxlength="10"
+        placeholder="Digite su apellido "
+        #apellido = "ngModel"
+        >
+      </div> 
+      <button class="btn btn-success mt-2" [disabled]= "!actorForm.form.valid">Guardar</button>
+    </form>
+  </div>
+  
